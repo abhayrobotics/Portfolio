@@ -1,10 +1,13 @@
 
 import './App.css'
+import Navbar from "./components/Navbar.tsx"
 
 function App() {
   return (
     <>
-    <h1>App</h1>
+     <main className="flex flex-col items-center m-2 ">
+      <Navbar />
+      </main>
     </>
   )
 }
