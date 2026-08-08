@@ -46,9 +46,9 @@ const Navbar = () => {
         {/* Mobile Button */}
         <button
           onClick={() => setIsOpen((prev) => !prev)}
-          className="text-gray-800 md:hidden"
+          className="text-gray-800 md:hidden bg-background"
         >
-          {isOpen ? <X />: <Menu />}
+          {isOpen ? <X color="text-content"/>: <Menu />}
         </button>
       </div>
 
@@ -58,13 +58,13 @@ const Navbar = () => {
           isOpen ? "max-h-96 border-t" : "max-h-0"
         }`}
       >
-        <nav className="flex flex-col bg-white px-6 py-5">
+        <nav className="flex flex-col bg-background px-6 py-5">
           {navLinks.map((link) => (
             <a
               key={link}
               href={`#${link.toLowerCase()}`}
               onClick={() => setIsOpen(false)}
-              className="border border-b border-gray-100 px-2  border-l-5 border-l-background  hover:border-l-primary my-2 py-2 text-lg font-medium text-content hover:text-primary"
+              className=" px-2  border-l-5 border-l-background  hover:border-l-primary my-2 py-2 text-lg font-medium text-content hover:text-primary"
             >
               {link}
             </a>
