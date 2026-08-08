@@ -1,1 +1,52 @@
 @import "tailwindcss";
+
+/* =========================
+   LIGHT THEME
+   ========================= */
+
+:root {
+  --theme-background: #f8fafc;
+  --theme-surface: #ffffff;
+  --theme-surface-muted: #f1f5f9;
+
+  --theme-content: #0f172a;
+  --theme-content-muted: #475569;
+
+  --theme-outline: #e2e8f0;
+
+  --theme-primary: #4f46e5;
+}
+
+/* =========================
+   DARK THEME
+   ========================= */
+
+.dark {
+  --theme-background: #07111f;
+  --theme-surface: #0b1728;
+  --theme-surface-muted: #101f33;
+
+  --theme-content: #f1f5f9;
+  --theme-content-muted: #a8b3c4;
+
+  --theme-outline: #1e2d42;
+
+  --theme-primary: #6366f1;
+}
+
+
+/* =========================
+   TAILWIND THEME
+   ========================= */
+@theme {
+  --color-background: var(--theme-background);
+  --color-surface: var(--theme-surface);
+  --color-surface-muted: var(--theme-surface-muted);
+
+  --color-content: var(--theme-content);
+  --color-content-muted: var(--theme-content-muted);
+
+  --color-outline: var(--theme-outline);
+
+  --color-primary: var(--theme-primary);
+}

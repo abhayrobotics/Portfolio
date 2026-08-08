@@ -1,5 +1,5 @@
 import { useState } from "react";
-// import { Menu, X, Download } from "lucide-react";
+import { Menu, X, Download } from "lucide-react";
 
 const navLinks = [
   "Home",
@@ -14,12 +14,12 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 z-50 w-full border-b border-gray-200 bg-white/90 backdrop-blur-md">
+    <header className="fixed top-0 left-0 z-50 w-full border-b border-outline  backdrop-blur-md bg-background">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8">
         {/* Logo */}
         <a
           href="/"
-          className="text-4xl font-extrabold tracking-tight text-indigo-600"
+          className="text-4xl text-primary font-extrabold tracking-tight text-content"
         >
           AK
         </a>
@@ -30,7 +30,7 @@ const Navbar = () => {
             <a
               key={link}
               href={`#${link.toLowerCase()}`}
-              className="relative font-medium text-gray-700 transition-colors duration-300 hover:text-indigo-600"
+              className="relative font-medium text-content transition-colors duration-300 pb-1 hover:text-primary hover:border-b-3 hover:border-b-primary"
             >
               {link}
             </a>
@@ -38,9 +38,9 @@ const Navbar = () => {
         </nav>
 
         {/* Resume Button */}
-        <button className="hidden items-center gap-2 rounded-xl bg-indigo-600 px-6 py-3 font-medium text-white transition hover:bg-indigo-700 md:flex">
+        <button className="hidden items-center gap-2 rounded-xl bg-primary px-6 py-3  font-medium text-white transition hover:bg-primary md:flex">
           {/* <Download size={18} /> */}
-          🔽 Download Resume
+          <Download size={20}/> Download Resume
         </button>
 
         {/* Mobile Button */}
@@ -48,7 +48,7 @@ const Navbar = () => {
           onClick={() => setIsOpen((prev) => !prev)}
           className="text-gray-800 md:hidden"
         >
-          {isOpen ? "X" : "="}
+          {isOpen ? <X />: <Menu />}
         </button>
       </div>
 
@@ -64,13 +64,13 @@ const Navbar = () => {
               key={link}
               href={`#${link.toLowerCase()}`}
               onClick={() => setIsOpen(false)}
-              className="border-b border-gray-100 py-4 text-lg font-medium text-gray-700 hover:text-indigo-600"
+              className="border border-b border-gray-100 px-2  border-l-5 border-l-background  hover:border-l-primary my-2 py-2 text-lg font-medium text-content hover:text-primary"
             >
               {link}
             </a>
           ))}
 
-          <button className="mt-6 flex items-center justify-center gap-2 rounded-xl bg-indigo-600 py-3 font-medium text-white">
+          <button className="mt-6 flex items-center justify-center gap-2 rounded-xl bg-primary py-3 font-medium text-white">
             {/* <Download size={18} /> */}
             Download Resume
           </button>
