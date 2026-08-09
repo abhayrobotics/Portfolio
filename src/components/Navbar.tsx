@@ -13,8 +13,18 @@ const navLinks = [
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const toggleMode =(status:boolean)=>{
+    console.log(status)
+    if(status){
+      document.documentElement.classList.add("dark")
+    }
+    else{
+      document.documentElement.classList.remove("dark")
+    }
+  }
+
   return (
-    <header className="fixed top-0 left-0 z-50 w-full border-b border-outline  backdrop-blur-md bg-background">
+    <header className="fixed top-0 left-0 z-50 w-full border-b border-outline  backdrop-blur-md bg-hero">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8">
         {/* Logo */}
         <a
@@ -23,6 +33,7 @@ const Navbar = () => {
         >
           AK
         </a>
+        <input type="checkbox"  onChange={(e)=>toggleMode(e.target.checked)} />
 
         {/* Desktop Navigation */}
         <nav className="hidden items-center gap-10 md:flex">
@@ -35,6 +46,7 @@ const Navbar = () => {
               {link}
             </a>
           ))}
+        
         </nav>
 
         {/* Resume Button */}
@@ -64,7 +76,7 @@ const Navbar = () => {
               key={link}
               href={`#${link.toLowerCase()}`}
               onClick={() => setIsOpen(false)}
-              className=" px-2  border-l-5 border-l-background  hover:border-l-primary my-2 py-2 text-lg font-medium text-content hover:text-primary"
+              className=" px-2  border-l-5 border-l-background transition-border ease-in duration-300 hover:border-l-primary my-2 py-2 text-lg font-medium text-content hover:text-primary"
             >
               {link}
             </a>

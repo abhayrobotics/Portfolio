@@ -5,6 +5,7 @@
    ========================= */
 
 :root {
+    --theme-hero: #f8fafc;
   --theme-background: #f8fafc;
   --theme-surface: #ffffff;
   --theme-surface-muted: #f1f5f9;
@@ -15,6 +16,7 @@
   --theme-outline: #e2e8f0;
 
   --theme-primary: #4f46e5;
+  
 }
 
 /* =========================
@@ -22,7 +24,8 @@
    ========================= */
 
 .dark {
-  --theme-background: #07111f;
+  --theme-hero: #020916;
+  --theme-background: #0b1220;;
   --theme-surface: #0b1728;
   --theme-surface-muted: #101f33;
 
@@ -39,6 +42,7 @@
    TAILWIND THEME
    ========================= */
 @theme {
+  --color-background:var(--theme-hero);
   --color-background: var(--theme-background);
   --color-surface: var(--theme-surface);
   --color-surface-muted: var(--theme-surface-muted);
