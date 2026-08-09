@@ -1,9 +1,28 @@
 import { CodeXml, Layers, CalendarCheck } from "lucide-react";
+import type {LucideIcon} from "lucide-react";
 
-const cards = [
+type Card = {
+  icon: LucideIcon;
+  time: string;
+  desc: string;
+};
+
+const cards :Card[] = [
   {
-    
-  }
+    icon:CalendarCheck,
+    time: "9+",
+    desc:"Years Engineering"
+  },
+  {
+    icon: Layers,
+    time: "6+",
+    desc:"Core Technologies"
+  },
+  {
+    icon: CodeXml,
+    time: "10+",
+    desc:"Projects Completed"
+  },
 ]
 
 const About = () => {
@@ -14,7 +33,7 @@ const About = () => {
           {/* About me */}
           <div>
             <p className="text-2xl">About Me</p>
-            <div className="w-5 h-1 text-content-muted mt-2 "></div>
+            <div className="w-5 h-1 bg-primary mt-2 "></div>
             <div className="py-2">
               <p>
                 I'm a Full Stack Developer focused on building production-ready
@@ -34,38 +53,26 @@ const About = () => {
               </p>
             </div>
           </div>
+
           {/* Data cards */}
-          <div className="flex  flex-col   justify-between">
+          <div className="flex  flex-col align-middle  justify-between">
+            {cards.map((item)=>{
+              const Icon = item.icon;
+            return(
+              
             <div className="flex items-center ">
               <div className="bg-surface/20 p-3">
-                <CalendarCheck color="blue" />
+                <Icon size={45 } className=" p-2 text-primary  my-5 bg-primary/20 rounded-lg" />
               </div>
               <div>
-                <p className="font-semibold">9+</p>
-                <p>Years Engineering</p>
+                <p className="font-semibold">{item.time}</p>
+                <p>{item.desc}</p>
               </div>
             </div>
-
-            <div className="flex items-center">
-              <div className="bg-primary/10 p-3">
-                <CodeXml color="blue" />
-              </div>
-              <div>
-                <p className="font-bold">10+</p>
-                <p>Project Completed</p>
-              </div>
-            </div>
-
-            <div className="flex items-center">
-              <div className="bg-primary/10 p-3">
-                <Layers color="blue" />
-              </div>
-              <div>
-                <p className="font-bold">6+</p>
-                <p>Core Technologies</p>
-              </div>
-            </div>
+            )}
+            )}
           </div>
+
         </div>
       </section>
     </>
