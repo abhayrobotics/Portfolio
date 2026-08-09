@@ -42,7 +42,7 @@
    TAILWIND THEME
    ========================= */
 @theme {
-  --color-background:var(--theme-hero);
+  --color-hero:var(--theme-hero);
   --color-background: var(--theme-background);
   --color-surface: var(--theme-surface);
   --color-surface-muted: var(--theme-surface-muted);

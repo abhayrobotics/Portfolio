@@ -24,7 +24,7 @@ const Navbar = () => {
   }
 
   return (
-    <header className="fixed top-0 left-0 z-50 w-full border-b border-outline  backdrop-blur-md bg-hero">
+    <header className="fixed top-0 left-0 z-50 w-full border-b border-outline scroll-smooth  backdrop-blur-md bg-hero">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8">
         {/* Logo */}
         <a
@@ -58,9 +58,9 @@ const Navbar = () => {
         {/* Mobile Button */}
         <button
           onClick={() => setIsOpen((prev) => !prev)}
-          className="text-gray-800 md:hidden bg-background"
+          className="text-content md:hidden bg-background"
         >
-          {isOpen ? <X color="text-content"/>: <Menu />}
+          {isOpen ? <X />: <Menu />}
         </button>
       </div>
 

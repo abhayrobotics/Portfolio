@@ -2,11 +2,11 @@ import { ArrowRight, Download, Mail, Rocket } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section id="top" className="relative overflow-hidden bg-background w-full p-0 text-content">
-      <div className="relative z-10 mx-auto grid min-h-[calc(100vh-62px)] max-w-[1120px] items-center gap-16 px-4 py-20 sm:px-6 lg:grid-cols-2 lg:px-8">
+    <section id="home" className="relative overflow-hidden bg-background w-full p-0 text-content ">
+      <div className="relative z-10 mx-auto   grid min-h-[calc(100vh)] max-w-280 items-center gap-16 px-4 py-20 sm:px-6 lg:grid-cols-2 lg:px-8">
         {/* LEFT */}
         <div>
-          <p className="mb-4 text-lg">Hi, I'm</p>
+          <p className="mb-4 pt-4 text-lg">Hi, I'm</p>
 
           <h1 className="text-4xl font-bold tracking-tight   sm:text-5xl    ">
             Abhay Kumar Gupta
@@ -73,7 +73,7 @@ const Hero = () => {
         {/* RIGHT */}
         <div className="relative flex flex-col items-center">
             {/* Background glow */}
-          <div className="absolute inset-0 -z-0">
+          <div className="absolute inset-0 z-0">
             <div className="absolute right-[8%] top-0 h-72 w-72 rounded-full bg-primary/20 blur-3xl" />
             <div className="absolute right-[5%] top-40 h-40 w-40 rounded-full bg-primary/50 blur-3xl" />
           </div>
@@ -83,13 +83,13 @@ const Hero = () => {
             <div className="absolute inset-0 rounded-full bg-primary/30 blur-2xl" />
 
             <img
-              src="../../public/profile5.png"
+              src="/public/profile5.png"
               alt="AK"
               className="relative h-56 w-56 rounded-full border-2 border-primary object-cover sm:h-65 sm:w-65"
             />
 
             {/* Small decorative dot */}
-            <span className="absolute bottom-20 right-0 h-5 w-5 rounded-full border-2 border-primary bg-primary" />
+            <span className="absolute bottom-20 -right-1 h-5 w-5 rounded-full border-2 border-primary bg-primary" />
           </div>
 
           {/* Status card */}
@@ -112,20 +112,5 @@ const Hero = () => {
   );
 };
 
-const BriefcaseIcon = () => {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      className="h-6 w-6 text-primary"
-    >
-      <rect x="3" y="7" width="18" height="13" rx="2" />
-      <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
-      <path d="M3 12h18" />
-    </svg>
-  );
-};
 
 export default Hero;
