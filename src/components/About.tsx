@@ -1,10 +1,16 @@
-import {CodeXml,Layers,CalendarCheck} from "lucide-react"
+import { CodeXml, Layers, CalendarCheck } from "lucide-react";
+
+const cards = [
+  {
+    
+  }
+]
 
 const About = () => {
   return (
     <>
       <section className="bg-surface text-content w-full" id="about">
-        <div className=" border-t border-outline mx-auto max-w-280 items-center gap-16 p-4 sm:px-6 lg:grid-cols-2 lg:px-8 ">
+        <div className=" border-t border-outline mx-auto max-w-280 items-center gap-16 p-4 grid  sm:px-6 lg:grid-cols-2 lg:px-8 ">
           {/* About me */}
           <div>
             <p className="text-2xl">About Me</p>
@@ -29,10 +35,36 @@ const About = () => {
             </div>
           </div>
           {/* Data cards */}
-          <div>
-            <CodeXml />
-            <Layers />
-            <CalendarCheck />
+          <div className="flex  flex-col   justify-between">
+            <div className="flex items-center ">
+              <div className="bg-surface/20 p-3">
+                <CalendarCheck color="blue" />
+              </div>
+              <div>
+                <p className="font-semibold">9+</p>
+                <p>Years Engineering</p>
+              </div>
+            </div>
+
+            <div className="flex items-center">
+              <div className="bg-primary/10 p-3">
+                <CodeXml color="blue" />
+              </div>
+              <div>
+                <p className="font-bold">10+</p>
+                <p>Project Completed</p>
+              </div>
+            </div>
+
+            <div className="flex items-center">
+              <div className="bg-primary/10 p-3">
+                <Layers color="blue" />
+              </div>
+              <div>
+                <p className="font-bold">6+</p>
+                <p>Core Technologies</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
