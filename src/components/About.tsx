@@ -1,5 +1,7 @@
 import { CodeXml, Layers, CalendarCheck } from "lucide-react";
 import type {LucideIcon} from "lucide-react";
+import { SectionHeading } from "./ui/SectionHeading";
+
 
 type Card = {
   icon: LucideIcon;
@@ -11,7 +13,7 @@ const cards :Card[] = [
   {
     icon:CalendarCheck,
     time: "9+",
-    desc:"Years Engineering"
+    desc:"Years of Engineering Experience"
   },
   {
     icon: Layers,
@@ -28,12 +30,11 @@ const cards :Card[] = [
 const About = () => {
   return (
     <>
-      <section className="bg-surface text-content w-full" id="about">
+      <section className="bg-surface text-content w-full py-2 " id="about">
         <div className=" border-t border-outline mx-auto max-w-280 items-center gap-16 p-4 grid  sm:px-6 lg:grid-cols-2 lg:px-8 ">
           {/* About me */}
           <div>
-            <p className="text-2xl">About Me</p>
-            <div className="w-5 h-1 bg-primary mt-2 "></div>
+            <SectionHeading>About</SectionHeading>
             <div className="py-2">
               <p>
                 I'm a Full Stack Developer focused on building production-ready
@@ -55,7 +56,7 @@ const About = () => {
           </div>
 
           {/* Data cards */}
-          <div className="flex  flex-col align-middle  justify-between">
+          <div className="flex  flex-col   justify-between">
             {cards.map((item)=>{
               const Icon = item.icon;
             return(

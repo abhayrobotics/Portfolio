@@ -85,11 +85,11 @@ const Hero = () => {
             <img
               src="/public/profile5.png"
               alt="AK"
-              className="relative h-56 w-56 rounded-full border-2 border-primary object-cover sm:h-65 sm:w-65"
+              className="relative h-56 w-56 rounded-full border-2 border-primary object-cover sm:h-56 sm:w-56"
             />
 
             {/* Small decorative dot */}
-            <span className="absolute bottom-20 -right-1 h-5 w-5 rounded-full border-2 border-primary bg-primary" />
+            <span className="absolute bottom-20 -right-2 h-5 w-5 rounded-full border-2 border-primary bg-primary" />
           </div>
 
           {/* Status card */}
