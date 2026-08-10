@@ -4,15 +4,46 @@ import {
   Database,
   Wrench,
 } from "lucide-react";
+import {
+  SiReact,
+  SiTypescript,
+  SiJavascript,
+  SiHtml5,
+  SiCss3,
+  SiTailwindcss,
+  SiRedux,
+  SiNodedotjs,
+  SiExpress,
+  SiJsonwebtokens,
+  SiPostgresql,
+  SiPrisma,
+  SiMongodb,
+  SiFirebase,
+  SiGit,
+  SiGithub,
+  SiPostman,
+  SiVercel,
+  SiRender,
+  SiVisualstudiocode,
+} from "react-icons/si";
+
+import type { IconType } from "react-icons";
 import type { LucideIcon } from "lucide-react";
 
 import { SectionHeading } from "../components/ui/SectionHeading";
 
-type SkillCategory = {
-  icon: LucideIcon;
-  title: string;
-  skills: string[];
+type Skill = {
+  name: string;
+  icon: IconType;
+  color: string;
 };
+
+type SkillCategory = {
+  icon: IconType;
+  title: string;
+  skills: Skill[];
+};
+
 
 const skillCategories: SkillCategory[] = [
   {
