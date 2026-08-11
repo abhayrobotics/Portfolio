@@ -1,4 +1,4 @@
-import { ArrowRight, Download, Mail, Rocket } from "lucide-react";
+import { ArrowRight, Mail, Rocket } from "lucide-react";
 import {FaGithub, FaLinkedin} from "react-icons/fa6"
 
 const Hero = () => {

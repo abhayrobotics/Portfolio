@@ -30,7 +30,7 @@ const cards :Card[] = [
 const About = () => {
   return (
     <>
-      <section className="bg-surface text-content w-full py-2 " id="about">
+      <section className="bg-surface text-content w-full py-2 pt-20" id="about">
         <div className="mx-auto max-w-280 items-center gap-16 p-4 grid  sm:px-6 lg:grid-cols-2 lg:px-8 ">
           {/* About me */}
           <div>
