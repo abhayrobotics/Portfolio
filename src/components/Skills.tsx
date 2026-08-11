@@ -9,7 +9,7 @@ import {
   SiTypescript,
   SiJavascript,
   SiHtml5,
-  SiCss3,
+  
   SiTailwindcss,
   SiRedux,
   SiNodedotjs,
@@ -24,7 +24,8 @@ import {
   SiPostman,
   SiVercel,
   SiRender,
-  SiVisualstudiocode,
+  Si1001Tracklists
+ 
 } from "react-icons/si";
 
 import type { IconType } from "react-icons";
@@ -44,57 +45,129 @@ type SkillCategory = {
   skills: Skill[];
 };
 
-
 const skillCategories: SkillCategory[] = [
   {
-    icon: Code2,
     title: "Frontend",
+    icon: Code2,
     skills: [
+      {
+        name: "React",
+        icon: SiReact,
+        color: "#61DAFB",
+      },
+      {
+        name: "TypeScript",
+        icon: SiTypescript,
+        color: "#3178C6",
+      },
+      {
+        name: "JavaScript",
+        icon: SiJavascript,
+        color: "#F7DF1E",
+      },
+      {
+        name: "HTML5",
+        icon: SiHtml5,
+        color: "#E34F26",
+      },
       
-      "React",
-      "TypeScript",
-      "JavaScript",
-      "HTML5",
-      "CSS3",
-      "Tailwind CSS",
-      "Redux Toolkit",
+      {
+        name: "Tailwind CSS",
+        icon: SiTailwindcss,
+        color: "#06B6D4",
+      },
+      {
+        name: "Redux Toolkit",
+        icon: SiRedux,
+        color: "#764ABC",
+      },
     ],
   },
+
   {
-    icon: Server,
     title: "Backend",
+    icon: Server,
     skills: [
-      "Node.js",
-      "Express.js",
-      "REST APIs",
-      "JWT Authentication",
-      "Middleware",
-      "CORS",
+      {
+        name: "Node.js",
+        icon: SiNodedotjs,
+        color: "#339933",
+      },
+      {
+        name: "Express.js",
+        icon: SiExpress,
+        color: "#000000",
+      },
+      {
+        name: "REST APIs",
+        icon: Si1001Tracklists,
+        color: "#0EA5E9",
+      },
+      {
+        name: "JWT Authentication",
+        icon: SiJsonwebtokens,
+        color: "#000000",
+      },
     ],
   },
+
   {
-    icon: Database,
     title: "Database",
+    icon: Database,
     skills: [
-      "PostgreSQL",
-      "Prisma",
-      "SQL",
-      "MongoDB",
-      "Firebase Firestore",
+      {
+        name: "PostgreSQL",
+        icon: SiPostgresql,
+        color: "#4169E1",
+      },
+      {
+        name: "Prisma",
+        icon: SiPrisma,
+        color: "#2D3748",
+      },
+      {
+        name: "MongoDB",
+        icon: SiMongodb,
+        color: "#47A248",
+      },
+      {
+        name: "Firebase Firestore",
+        icon: SiFirebase,
+        color: "#FFCA28",
+      },
     ],
   },
+
   {
-    icon: Wrench,
     title: "Tools & Others",
+    icon: Wrench,
     skills: [
-      "Git",
-      "GitHub",
-      "Postman",
-      "Vercel",
-      "Render",
-      "VS Code",
-      
-    ],
+      {
+        name: "Git",
+        icon: SiGit,
+        color: "#F05032",
+      },
+      {
+        name: "GitHub",
+        icon: SiGithub,
+        color: "#181717",
+      },
+      {
+        name: "Postman",
+        icon: SiPostman,
+        color: "#FF6C37",
+      },
+      {
+        name: "Vercel",
+        icon: SiVercel,
+        color: "#000000",
+      },
+      {
+        name: "Render",
+        icon: SiRender,
+        color: "#46E3B7",
+      },
+    ]
   },
 ];
 
@@ -102,16 +175,16 @@ const Skills = () => {
   return (
     <section id="skills" className="bg-background text-content py-20 w-full">
       <div className="mx-auto w-full max-w-[1120px] px-4 sm:px-6 lg:px-8">
-
+   
         <SectionHeading>Skills</SectionHeading>
 
         <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-          {skillCategories.map((category) => {
+          {skillCategories.map((category,index) => {
             const Icon = category.icon;
 
             return (
               <div
-                key={category.title}
+                key={category.title+index}
                 className="rounded-xl border border-border bg-surface p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40"
               >
                 {/* Category heading */}
@@ -127,14 +200,18 @@ const Skills = () => {
 
                 {/* Skills */}
                 <div className="flex flex-wrap gap-2">
-                  {category.skills.map((skill) => (
+                  {category.skills.map((skill) =>{
+                    const IconSmall = skill.icon;
+
+                   return(
                     <span
-                      key={skill}
-                      className="rounded-md bg-primary/10 px-3 py-1.5 text-sm text-content"
+                      key={skill.name}
+                      className="flex items-center rounded-md bg-primary/10 px-3 py-1.5 text-sm text-content"
                     >
-                      {skill}
+                      <IconSmall color={skill.color}/>
+                      <div className="pl-2">{skill.name}</div>
                     </span>
-                  ))}
+                  )})}
                 </div>
               </div>
             );

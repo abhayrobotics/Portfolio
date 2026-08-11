@@ -57,11 +57,11 @@ const About = () => {
 
           {/* Data cards */}
           <div className="flex  flex-col   justify-between">
-            {cards.map((item)=>{
+            {cards.map((item,index)=>{
               const Icon = item.icon;
             return(
               
-            <div className="flex items-center ">
+            <div key={index} className="flex items-center ">
               <div className="bg-surface/20 p-3">
                 <Icon size={45 } className=" p-2 text-primary  my-5 bg-primary/20 rounded-lg" />
               </div>
