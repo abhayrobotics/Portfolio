@@ -3,9 +3,9 @@ import { Menu, X, Download } from "lucide-react";
 
 const navLinks = [
   "Home",
-  "About",
-  "Projects",
+  "About", 
   "Skills",
+  "Projects",
   "Experience",
   "Contact",
 ];

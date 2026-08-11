@@ -9,7 +9,7 @@ import {
   SiTypescript,
   SiJavascript,
   SiHtml5,
-  
+  SiCss,
   SiTailwindcss,
   SiRedux,
   SiNodedotjs,
@@ -70,7 +70,12 @@ const skillCategories: SkillCategory[] = [
         icon: SiHtml5,
         color: "#E34F26",
       },
+      {
+        name: "CSS3",
+        icon: SiCss,
+        color: "#1572B6",
       
+      },
       {
         name: "Tailwind CSS",
         icon: SiTailwindcss,
@@ -173,8 +178,8 @@ const skillCategories: SkillCategory[] = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="bg-background text-content py-20 w-full">
-      <div className="mx-auto w-full max-w-[1120px] px-4 sm:px-6 lg:px-8">
+    <section id="skills" className=" bg-surface text-content py-20 w-full">
+      <div className="  border-t border-outline  mx-auto w-full max-w-[1120px] px-4 py-2 sm:px-6 lg:px-8">
    
         <SectionHeading>Skills</SectionHeading>
 

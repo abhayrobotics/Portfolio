@@ -1,4 +1,5 @@
 import { ArrowRight, Download, Mail, Rocket } from "lucide-react";
+import {FaGithub, FaLinkedin} from "react-icons/fa6"
 
 const Hero = () => {
   return (
@@ -47,8 +48,8 @@ const Hero = () => {
               aria-label="GitHub" target="_blank" rel="noopener noreferrer"
               className="text-content-muted transition-colors hover:text-primary"
             >
-              {/* <Github size={23} /> */}
-              Github
+              <FaGithub size={23} />
+              {/* Github */}
             </a>
 
             <a
@@ -56,8 +57,8 @@ const Hero = () => {
               aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"
               className="text-content-muted transition-colors hover:text-primary"
             >
-              {/* <Linkedin size={23} /> */}
-              Linkedin
+              <FaLinkedin size={23} />
+              {/* Linkedin */}
             </a>
 
             <a
