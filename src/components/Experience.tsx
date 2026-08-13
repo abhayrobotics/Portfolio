@@ -45,7 +45,7 @@ const experiences: ExperienceItem[] = [
 const Experience = () => {
   return (
     <section id="experience" className=" bg-surface text-content py-20  w-full">
-      <div className="  border-t border-outline  mx-auto w-full max-w-[1120px] px-4 py-2 sm:px-6 lg:px-8">
+      <div className="  border-t border-outline  mx-auto w-full max-w-280 px-4 py-2 sm:px-6 lg:px-8">
         <SectionHeading>Experience</SectionHeading>
 
         <div className="mt-8">

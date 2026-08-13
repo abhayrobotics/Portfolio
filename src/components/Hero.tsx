@@ -26,7 +26,7 @@ const Hero = () => {
           <div className="mt-8 flex flex-wrap gap-4">
             <a
               href="#projects"
-              className="inline-flex items-center gap-2 rounded-md bg-gradient-to-r from-blue-600 to-violet-600 px-6 py-3 font-medium text-white transition-transform duration-300 hover:scale-105"
+              className="inline-flex items-center gap-2 rounded-md bg-linear-to-r from-blue-600 to-violet-600 px-6 py-3 font-medium text-white transition-transform duration-300 hover:scale-105"
             >
               View Projects
               <ArrowRight size={18} />
