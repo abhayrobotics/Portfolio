@@ -26,7 +26,8 @@
 .dark {
   --theme-hero: #020916;
   --theme-background: #0b1220;;
-  --theme-surface: #0b1728;
+  /* --theme-surface: #0b1728; */
+  --theme-surface: #111d31;
   --theme-surface-muted: #101f33;
 
   --theme-content: #f1f5f9;

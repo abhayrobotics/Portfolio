@@ -57,7 +57,7 @@ const Experience = () => {
               <div className="relative hidden md:block">
                 <div className="absolute left-1/2 top-1 h-3 w-3 -translate-x-1/2 rounded-full bg-primary" />
 
-                <div className="absolute left-1/2 top-4 h-[calc(100%-16px)] w-px -translate-x-1/2 bg-primary/40" />
+                <div className="absolute left-1/2 top-4 h-[calc(100%)] w-px -translate-x-1/2 bg-primary/40" />
               </div>
 
               {/* Experience content */}

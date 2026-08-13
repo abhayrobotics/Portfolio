@@ -165,7 +165,7 @@ const Projects = () => {
                     >
 
                       <span className="text-nowrap">Live Link</span>
-                      <ExternalLink size={17}  />
+                      <ExternalLink size={13}  />
                     </a>
                   )}
 
