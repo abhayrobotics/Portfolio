@@ -51,7 +51,7 @@ const Contact = () => {
       id="contact"
       className="w-full bg-surface py-20 text-content"
     >
-      <div className="mx-auto w-full max-w-[1120px] px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto w-full max-w-280 px-4 sm:px-6 lg:px-8">
         
         {/* Heading */}
         <SectionHeading>Contact Me</SectionHeading>
