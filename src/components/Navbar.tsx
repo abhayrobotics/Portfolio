@@ -23,6 +23,7 @@ const Navbar = () => {
           href="/"
           className="text-4xl text-primary font-extrabold tracking-tight "
         >
+          {/* <img className="max-w-2" src="/logo.png" /> */}
           AK
         </a>
 
@@ -44,13 +45,20 @@ const Navbar = () => {
 
         {/* Resume Button */}
         <button className="hidden items-center gap-2 rounded-xl bg-primary px-6 py-3  font-medium text-white transition hover:bg-primary md:flex">
-          {/* <Download size={18} /> */}
-          <Download size={20} /> Download Resume
+           <a
+              href="/Abhay Kumar Gupta_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex "
+            >
+              <Download size={18} />
+             <p className="pl-2"> Download Resume</p>
+            </a>
         </button>
 
         {/* Mobile Button */}
         <div className="flex md:hidden ">
-          <ThemeToggle  />
+          <ThemeToggle />
           <button
             onClick={() => setIsOpen((prev) => !prev)}
             className="text-content md:hidden bg-background ml-5"
@@ -79,8 +87,15 @@ const Navbar = () => {
           ))}
 
           <button className="mt-6 flex items-center justify-center gap-2 rounded-xl bg-primary py-3 font-medium text-white">
-            {/* <Download size={18} /> */}
-            Download Resume
+            <a
+              href="/Abhay Kumar Gupta_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex "
+            >
+              <Download size={18} />
+             <p className="pl-2"> Download Resume</p>
+            </a>
           </button>
         </nav>
       </div>
