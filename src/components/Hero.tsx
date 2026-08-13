@@ -84,7 +84,7 @@ const Hero = () => {
             <div className="absolute inset-0 rounded-full bg-primary/30 blur-2xl" />
 
             <img
-              src="/public/profile5.png"
+              src="/profile5.png"
               alt="AK"
               className="relative h-56 w-56 rounded-full border-2 border-primary object-cover sm:h-56 sm:w-56"
             />
