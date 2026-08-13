@@ -11,31 +11,33 @@ type ExperienceItem = {
 
 const experiences: ExperienceItem[] = [
   {
-    role: "Junior Electrical Engineer",
+    role: "Junior Engineer",
     company:
       "West Bengal State Electricity Distribution Company Limited (WBSEDCL)",
-    period: "2018 – Present",
+    period: "2017 – Present",
+
     description:
-      "Working in electrical engineering operations while independently developing production-style web applications and applying software engineering practices to solve real-world problems.",
+      "Engineering professional transitioning into full-stack software development, combining 9+ years of engineering experience with hands-on experience building modern web applications.",
+
     responsibilities: [
-      "Managed engineering operations and coordinated activities with multiple stakeholders.",
-      "Analyzed operational data and prepared technical reports for management.",
-      "Worked with structured processes, troubleshooting and problem-solving in operational environments.",
-      "Developed full-stack web applications using React, TypeScript, Node.js, Express and PostgreSQL alongside my professional role.",
+      "Analyze complex operational requirements and translate them into structured, practical solutions.",
+      "Work with operational data, reporting and process-driven workflows in a large-scale organization.",
+      "Develop full-stack applications using React, TypeScript, Node.js, Express.js and PostgreSQL.",
+      "Build REST APIs, authentication systems, database schemas and responsive user interfaces.",
+      "Apply engineering principles such as problem-solving, systems thinking and attention to detail to software development.",
+      "Currently focused on building production-ready web applications and exploring AI-powered solutions.",
     ],
   },
   {
     role: "Executive Engineer",
-    company:
-      "Pinnacle Infotech Solutions",
-    period: "2016 – 2018",
+    company: "Pinnacle Infotech Solutions",
+    period: "2016 – 2017",
     description:
-      "Working in electrical engineering operations while independently developing production-style web applications and applying software engineering practices to solve real-world problems.",
+      "Worked on Building Information Modeling (BIM) projects, supporting digital construction workflows and model coordination.",
     responsibilities: [
-      "Managed engineering operations and coordinated activities with multiple stakeholders.",
-      "Analyzed operational data and prepared technical reports for management.",
-      "Worked with structured processes, troubleshooting and problem-solving in operational environments.",
-      "Developed full-stack web applications using React, TypeScript, Node.js, Express and PostgreSQL alongside my professional role.",
+      "Created and maintained BIM models according to project requirements.",
+      "Supported model coordination and documentation for building services.",
+      "Collaborated with project teams to resolve design and modeling issues.",
     ],
   },
 ];
@@ -44,7 +46,6 @@ const Experience = () => {
   return (
     <section id="experience" className=" bg-surface text-content py-20  w-full">
       <div className="  border-t border-outline  mx-auto w-full max-w-[1120px] px-4 py-2 sm:px-6 lg:px-8">
-   
         <SectionHeading>Experience</SectionHeading>
 
         <div className="mt-8">
@@ -61,9 +62,8 @@ const Experience = () => {
               </div>
 
               {/* Experience content */}
-              <div className="rounded-xl border border-border bg-surface p-6 transition-all duration-300 hover:border-primary/40 hover:shadow-lg">
+              <div className="rounded-xl border border-primary/40  hover:border-content bg-surface p-6 transition-all duration-300  hover:shadow-lg">
                 <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-start">
-                  
                   <div className="flex gap-4">
                     {/* Icon */}
                     <div className="hidden rounded-lg bg-primary/10 p-3 text-primary sm:flex">

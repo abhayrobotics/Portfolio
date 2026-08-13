@@ -7,6 +7,7 @@ const navLinks = [
   "Skills",
   "Projects",
   "Experience",
+  "Education",
   "Contact",
 ];
 

@@ -1,6 +1,7 @@
 
 import './App.css'
 import About from './components/About.tsx'
+import Education from './components/Education.tsx'
 import Experience from './components/Experience.tsx'
 import Hero from './components/Hero.tsx'
 import Navbar from "./components/Navbar.tsx"
@@ -17,6 +18,7 @@ function App() {
         <Skills/>
         <Project />
         <Experience />
+        <Education />
       </main>
     </>
   )

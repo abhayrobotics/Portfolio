@@ -96,7 +96,7 @@ const Projects = () => {
           {projects.map((project) => (
             <article
               key={project.title}
-              className="group overflow-hidden rounded-xl border border-border bg-surface shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+              className="group overflow-hidden rounded-xl border border-primary/40  hover:border-content bg-surface shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
             >
               {/* Project image */}
               <div className="relative aspect-video overflow-hidden bg-background">
