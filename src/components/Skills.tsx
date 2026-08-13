@@ -29,7 +29,6 @@ import {
 } from "react-icons/si";
 
 import type { IconType } from "react-icons";
-import type { LucideIcon } from "lucide-react";
 
 import { SectionHeading } from "../components/ui/SectionHeading";
 
