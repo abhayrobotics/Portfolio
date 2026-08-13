@@ -137,7 +137,7 @@ const Projects = () => {
                 </div>
 
                 {/* Links */}
-                <div className="mt-5 flex items-center gap-4 border-t border-border pt-4">
+                <div className="mt-5 flex items-center gap-4  border-t  border-primary/40  pt-4">
 
                   {project.github && (
                     <a

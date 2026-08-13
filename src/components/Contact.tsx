@@ -79,6 +79,8 @@ const Contact = () => {
                   <a
                     key={item.label}
                     href={item.href}
+                     target="_blank"
+                      rel="noopener noreferrer"
                     className="flex items-center gap-4 transition-colors duration-300 hover:text-primary"
                   >
                     <div className="rounded-lg bg-primary/10 p-3 text-primary">
