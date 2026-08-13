@@ -7,6 +7,7 @@ import Hero from './components/Hero.tsx'
 import Navbar from "./components/Navbar.tsx"
 import Project from './components/Project.tsx'
 import Skills from './components/Skills.tsx'
+import Contact from './components/Contact.tsx'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Project />
         <Experience />
         <Education />
+        <Contact />
       </main>
     </>
   )

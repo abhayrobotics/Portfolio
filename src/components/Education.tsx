@@ -32,7 +32,7 @@ const education: EducationItem[] = [
 
 const Education = () => {
   return (
-      <section id="experience" className=" bg-surface text-content py-20  w-full">
+      <section id="education" className=" bg-surface text-content py-20  w-full">
       <div className="  border-t border-outline  mx-auto w-full max-w-[1120px] px-4 py-2 sm:px-6 lg:px-8">
         <SectionHeading>Education & Certifications</SectionHeading>
         <div className="mt-8" >

@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Menu, X, Download } from "lucide-react";
+import ThemeToggle from "./ThemeToggle";
 
 const navLinks = [
   "Home",
-  "About", 
+  "About",
   "Skills",
   "Projects",
   "Experience",
@@ -14,27 +15,18 @@ const navLinks = [
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMode =(status:boolean)=>{
-    console.log(status)
-    if(status){
-      document.documentElement.classList.add("dark")
-    }
-    else{
-      document.documentElement.classList.remove("dark")
-    }
-  }
-
   return (
     <header className="fixed top-0 left-0 z-50 w-full border-b border-outline scroll-smooth  backdrop-blur-md bg-hero">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8">
         {/* Logo */}
         <a
           href="/"
-          className="text-4xl text-primary font-extrabold tracking-tight text-content"
+          className="text-4xl text-primary font-extrabold tracking-tight "
         >
           AK
         </a>
-        <input type="checkbox"  onChange={(e)=>toggleMode(e.target.checked)} />
+
+        {/* <input type="checkbox"  onChange={(e)=>toggleMode(e.target.checked)} /> */}
 
         {/* Desktop Navigation */}
         <nav className="hidden items-center gap-10 md:flex">
@@ -47,28 +39,31 @@ const Navbar = () => {
               {link}
             </a>
           ))}
-        
+          <ThemeToggle />
         </nav>
 
         {/* Resume Button */}
         <button className="hidden items-center gap-2 rounded-xl bg-primary px-6 py-3  font-medium text-white transition hover:bg-primary md:flex">
           {/* <Download size={18} /> */}
-          <Download size={20}/> Download Resume
+          <Download size={20} /> Download Resume
         </button>
 
         {/* Mobile Button */}
-        <button
-          onClick={() => setIsOpen((prev) => !prev)}
-          className="text-content md:hidden bg-background"
-        >
-          {isOpen ? <X />: <Menu />}
-        </button>
+        <div className="flex md:hidden ">
+          <ThemeToggle  />
+          <button
+            onClick={() => setIsOpen((prev) => !prev)}
+            className="text-content md:hidden bg-background ml-5"
+          >
+            {isOpen ? <X /> : <Menu />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
       <div
         className={`overflow-hidden transition-all duration-300 md:hidden ${
-          isOpen ? "max-h-96 border-t" : "max-h-0"
+          isOpen ? "max-h-140 border-t" : "max-h-0"
         }`}
       >
         <nav className="flex flex-col bg-background px-6 py-5">
